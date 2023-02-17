@@ -10,13 +10,12 @@ app.get("/", function (req, res) {
 
     res.sendFile(__dirname + "/index.html");
 
-
 });
 
 app.post("/", function (req, res) {
 
     const query = req.body.cityName;
-    const apiKey = "Enter Your Own API Key";
+    const apiKey = "Enter Your Own API Key"; //Swap this string out with your own openweathermap API key
 
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=metric";
 
